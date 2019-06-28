@@ -1,4 +1,8 @@
 class Patient < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   validates :first_name, presence: true, length: { in: 3..20 }
   validates :last_name, presence: true, length: { in: 7..30 }
   validates :identification, presence: true, uniqueness: { case_sensitive: false },
