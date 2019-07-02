@@ -1,4 +1,8 @@
 class Doctor < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :recoverable,
+         :rememberable, :validatable
   validates :first_name, presence: true, length: { minimum: 3, maximum: 20 }
   validates :last_name, presence: true, length: { minimum: 7, maximum: 30 }
   validates :identification, presence: true, uniqueness: { case_sensitive: false },
