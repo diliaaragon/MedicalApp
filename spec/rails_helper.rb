@@ -1,8 +1,11 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'simplecov'
 require 'spec_helper'
+<<<<<<< HEAD
 require 'support/factory_bot'
 require 'support/database_cleaner'
+=======
+>>>>>>> Add Rspec gem to project and other gem for the test and its configurations.
 ENV['RAILS_ENV'] ||= 'test'
 SimpleCov.start
 require File.expand_path('../../config/environment', __FILE__)
